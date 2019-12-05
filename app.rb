@@ -6,5 +6,9 @@ class App < Sinatra::Base
     erb :index
   end
 
-  
+  post '/puppy' do
+    @name = params[:name]
+    @breed= params[:breed]
+    @age= params[:age]
+  end
 end
